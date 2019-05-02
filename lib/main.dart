@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import './ui/home.dart';
+import './ui/add.dart';
 
 void main() => runApp(MyApp());
 
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
       initialRoute: "/",
       routes: {
         "/": (context) => Home(),
+        "/add": (context) => Add(),
       },
     );
   }
