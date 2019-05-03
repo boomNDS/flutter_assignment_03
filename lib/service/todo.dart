@@ -5,15 +5,15 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 class Todo {
   int id;
   String title;
-  bool done;
+  int done;
   final DocumentReference reference;
 
 
   Todo.fromMap(Map<String, dynamic> map, {this.reference})
-      : assert(map['id'] != null),
+      : assert(map['_id'] != null),
         assert(map['title'] != null),
         assert(map['done'] != null),
-        id = map['id'],
+        id = map['_id'],
         title = map['title'],
         done = map['done'];
   Todo.fromSnapshot(DocumentSnapshot snapshot)
